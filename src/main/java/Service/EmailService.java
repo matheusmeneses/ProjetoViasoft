@@ -4,6 +4,7 @@ import adpter.EmailAdapterFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dto.EmailRequestDTO;
+import org.springframework.stereotype.Service;
 
 @Service
 public class EmailService {
