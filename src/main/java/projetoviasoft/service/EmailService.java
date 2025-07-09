@@ -2,6 +2,8 @@ package projetoviasoft.service;
 
 import lombok.RequiredArgsConstructor;
 import projetoviasoft.adapter.EmailAdapterFactory;
+import projetoviasoft.dto.EmailAwsDTO;
+import projetoviasoft.dto.EmailOciDTO;
 import projetoviasoft.dto.EmailRequestDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,8 +25,18 @@ public class EmailService {
         try {
             String json = objectMapper.writeValueAsString(emailDto);
             logger.info(json);
+            enviarEmailAdaptado(json);
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Erro ao serializar objeto");
+        }
+    }
+
+    private void enviarEmailAdaptado(Object emailDto) {
+        logger.info("Simulando envio de e-mail: {}", emailDto.getClass().getSimpleName());
+        if (emailDto instanceof EmailAwsDTO) {
+            logger.info("Simulação: Enviando via AWS");
+        } else if (emailDto instanceof EmailOciDTO) {
+            logger.info("Simulação: Enviando via OCI");
         }
     }
 }
