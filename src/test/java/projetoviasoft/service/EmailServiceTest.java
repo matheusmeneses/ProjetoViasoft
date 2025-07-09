@@ -12,7 +12,7 @@ import static org.mockito.Mockito.*;
 class EmailServiceTest {
 
     @Test
-    void processarEmail_DeveSerializarEImprimir() throws JsonProcessingException {
+    void processarEmail_DeveSerializarEImprimirEEnviar() throws JsonProcessingException {
         EmailRequestDTO dto = new EmailRequestDTO();
         dto.setDestinatarioEmail("destino@exemplo.com");
         dto.setDestinatarioNome("Nome Destinatário");
@@ -33,11 +33,15 @@ class EmailServiceTest {
         EmailAdapterFactory factoryMock = mock(EmailAdapterFactory.class);
         when(factoryMock.getAdapter()).thenReturn(adapterMock);
 
-        EmailService service = new EmailService(factoryMock);
+        // Crie um spy do EmailService
+        EmailService service = spy(new EmailService(factoryMock));
 
         service.processarEmail(dto);
 
         verify(factoryMock, times(1)).getAdapter();
         verify(adapterMock, times(1)).adaptar(dto);
+
+        // Verifica se o método de envio foi chamado
+        verify(service, times(1)).enviarEmailAdaptado(awsDTO);
     }
 }

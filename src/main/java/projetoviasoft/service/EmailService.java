@@ -25,13 +25,13 @@ public class EmailService {
         try {
             String json = objectMapper.writeValueAsString(emailDto);
             logger.info(json);
-            enviarEmailAdaptado(json);
+            enviarEmailAdaptado(emailDto);
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Erro ao serializar objeto");
         }
     }
 
-    private void enviarEmailAdaptado(Object emailDto) {
+    protected void enviarEmailAdaptado(Object emailDto) {
         logger.info("Simulando envio de e-mail: {}", emailDto.getClass().getSimpleName());
         if (emailDto instanceof EmailAwsDTO) {
             logger.info("Simulação: Enviando via AWS");
