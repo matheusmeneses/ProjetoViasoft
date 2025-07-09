@@ -1,7 +1,7 @@
-package controller;
+package ProjetoViasoft.ProjetoViasoft.controller;
 
-import Service.EmailService;
-import dto.EmailRequestDTO;
+import ProjetoViasoft.ProjetoViasoft.Service.EmailService;
+import ProjetoViasoft.ProjetoViasoft.dto.EmailRequestDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

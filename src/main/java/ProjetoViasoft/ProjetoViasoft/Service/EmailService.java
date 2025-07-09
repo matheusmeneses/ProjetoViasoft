@@ -1,16 +1,22 @@
-package Service;
+package ProjetoViasoft.ProjetoViasoft.Service;
 
-import adpter.EmailAdapterFactory;
+import ProjetoViasoft.ProjetoViasoft.adapter.EmailAdapterFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dto.EmailRequestDTO;
+import ProjetoViasoft.ProjetoViasoft.dto.EmailRequestDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EmailService {
 
+    @Autowired
     private EmailAdapterFactory factory;
     private final ObjectMapper objectMapper = new ObjectMapper();
+
+    public EmailService(EmailAdapterFactory factory) {
+        this.factory = factory;
+    }
 
     public void processarEmail(EmailRequestDTO dto) {
         Object emailDto = factory.getAdapter().adaptar(dto);
