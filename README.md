@@ -50,7 +50,6 @@ cd ProjetoViasoft
 
 Compile e rode:
 
-    bash
     mvn clean install
     mvn spring-boot:run
 
@@ -66,12 +65,12 @@ Configuração
 
 No arquivo src/main/resources/application.properties defina qual plataforma será simulada:
 
-text
 mail.integracao=AWS
-# ou
+ou
 mail.integracao=OCI
 
 Exemplo de requisição
+
 Payload de entrada (EmailRequestDTO):
 
 json
