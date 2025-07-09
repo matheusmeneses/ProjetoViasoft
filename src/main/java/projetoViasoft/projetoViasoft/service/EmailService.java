@@ -11,13 +11,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailService {
 
-    private EmailAdapterFactory factory;
+    private final EmailAdapterFactory factory;
     private final ObjectMapper objectMapper = new ObjectMapper();
     private static final Logger logger = LoggerFactory.getLogger(EmailService.class);
 
     public EmailService(EmailAdapterFactory factory) {
         this.factory = factory;
     }
+
 
     public void processarEmail(EmailRequestDTO dto) {
         Object emailDto = factory.getAdapter().adaptar(dto);
