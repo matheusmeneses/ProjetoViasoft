@@ -1,7 +1,7 @@
-package ProjetoViasoft.ProjetoViasoft.adapter;
+package projetoViasoft.projetoViasoft.adapter;
 
-import ProjetoViasoft.ProjetoViasoft.dto.EmailOciDTO;
-import ProjetoViasoft.ProjetoViasoft.dto.EmailRequestDTO;
+import projetoViasoft.projetoViasoft.dto.EmailOciDTO;
+import projetoViasoft.projetoViasoft.dto.EmailRequestDTO;
 
 public class EmailOciAdapter implements EmailAdapter {
 
