@@ -19,7 +19,6 @@ public class EmailService {
         this.factory = factory;
     }
 
-
     public void processarEmail(EmailRequestDTO dto) {
         Object emailDto = factory.getAdapter().adaptar(dto);
         try {
