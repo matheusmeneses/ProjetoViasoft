@@ -40,8 +40,6 @@ Tecnologias
 
     JUnit 5 & Mockito (testes)
 
-    H2 Database (opcional, não utilizado neste desafio)
-
 Como rodar o projeto
 
     Clone o repositório:
