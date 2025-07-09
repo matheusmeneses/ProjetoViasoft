@@ -1,6 +1,7 @@
 ProjetoViasoft
 
 Desafio técnico back-end para a Viasoft — aplicação REST para simulação de envio de e-mails com adaptação de payload conforme configuração.
+
 Sumário
 
     Descrição
@@ -24,6 +25,7 @@ Sumário
 Descrição
 
 Este projeto simula o envio de e-mails por diferentes plataformas (AWS ou OCI), adaptando o objeto de entrada para o formato correto conforme configuração no application.properties. O objetivo é demonstrar arquitetura em camadas, uso de design patterns, validação, tratamento de erros e boas práticas REST.
+
 Tecnologias
 
     Java 17
@@ -151,4 +153,4 @@ Diferenciais
 
     Fácil de evoluir e manter.
 
-Desenvolvido por [Seu Nome] para o desafio técnico Viasoft.
+Desenvolvido por Matheus Menses para o desafio técnico Viasoft.
