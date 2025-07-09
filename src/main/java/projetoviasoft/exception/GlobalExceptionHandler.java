@@ -1,4 +1,4 @@
-package projetoViasoft.projetoViasoft.exception;
+package projetoviasoft.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

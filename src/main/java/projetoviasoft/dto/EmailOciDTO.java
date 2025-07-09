@@ -1,4 +1,4 @@
-package projetoViasoft.projetoViasoft.dto;
+package projetoviasoft.dto;
 
 import jakarta.validation.constraints.Size;
 import lombok.Data;

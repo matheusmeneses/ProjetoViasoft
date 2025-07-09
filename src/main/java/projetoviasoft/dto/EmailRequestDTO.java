@@ -1,4 +1,4 @@
-package projetoViasoft.projetoViasoft.dto;
+package projetoviasoft.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

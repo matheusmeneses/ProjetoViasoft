@@ -1,7 +1,7 @@
-package projetoViasoft.projetoViasoft.adapter;
+package projetoviasoft.adapter;
 
-import projetoViasoft.projetoViasoft.dto.EmailAwsDTO;
-import projetoViasoft.projetoViasoft.dto.EmailRequestDTO;
+import projetoviasoft.dto.EmailAwsDTO;
+import projetoviasoft.dto.EmailRequestDTO;
 
 public class EmailAwsAdapter implements EmailAdapter {
 

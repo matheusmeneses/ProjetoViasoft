@@ -1,9 +1,9 @@
-package projetoViasoft.projetoViasoft.service;
+package projetoviasoft.service;
 
-import projetoViasoft.projetoViasoft.adapter.EmailAdapter;
-import projetoViasoft.projetoViasoft.adapter.EmailAdapterFactory;
-import projetoViasoft.projetoViasoft.dto.EmailRequestDTO;
-import projetoViasoft.projetoViasoft.dto.EmailAwsDTO;
+import projetoviasoft.adapter.EmailAdapter;
+import projetoviasoft.adapter.EmailAdapterFactory;
+import projetoviasoft.dto.EmailRequestDTO;
+import projetoviasoft.dto.EmailAwsDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.Test;
 
