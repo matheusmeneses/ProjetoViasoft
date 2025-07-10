@@ -105,6 +105,10 @@ json
   "body": "Conteúdo do email"
 }
 
+Documentação interativa (Swagger UI)
+Após rodar o projeto, acesse a documentação e teste os endpoints diretamente pelo navegador:
+http://localhost:8080/swagger-ui.html
+
 Validações
 
     Todos os campos são obrigatórios.
